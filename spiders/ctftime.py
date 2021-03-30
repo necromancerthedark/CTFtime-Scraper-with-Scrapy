@@ -4,7 +4,7 @@ import scrapy
 class Ctf(scrapy.Spider):
     name = 'Ctftime'
     start_urls = [
-        'https://ctftime.org/event/list/?year=2020&online=-1&format=0&restrictions=-1']
+        'https://ctftime.org/event/list/?year=2021&online=-1&format=0&restrictions=-1']
 
     def parse(self, response):
         name = response.css(".table-striped a::text").extract()
